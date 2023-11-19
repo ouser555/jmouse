@@ -9,5 +9,6 @@
   * 1encoder
   * 1 0.91" oled
   * 1 adns5050 optical sensor
+  * 1 scroll encoder
 
 * make jmouse:via
