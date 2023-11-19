@@ -248,11 +248,11 @@ int16_t maxisCoordinate(pin_t pin, uint16_t origin) {
 
     if (origin == position) {
         return 0;
-    } else if (origin > position) { // 負
+    } else if (origin > position) {
         distanceFromOrigin = origin - position;
         range              = origin - _MIN;
         direction          = -1;
-    } else { // 正
+    } else {
         distanceFromOrigin = position - origin;
         range              = _MAX - origin;
         direction          = 1;
