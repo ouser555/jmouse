@@ -2,7 +2,8 @@
 
 * qmk 0.22.13
 
-* hardware 
+* hardware
+  * 1rp2040 moudle 
   * 11keys
   * 1joystick
   * 1encoder
@@ -10,5 +11,3 @@
   * 1 adns5050 optical sensor
 
 * make jmouse:via
-
-* 
