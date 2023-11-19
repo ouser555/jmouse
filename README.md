@@ -3,7 +3,7 @@
 * qmk 0.22.13
 
 * hardware
-  * 1rp2040 moudle 
+  * 1rp2040 zero moudle 
   * 11keys
   * 1joystick
   * 1encoder
