@@ -51,13 +51,13 @@ enum jmodes {
 };
 
 enum cpis {
-    _GEAR1 = 125,
-    _GEAR2 = 500,
-    _GEAR3 = 1000,
-    _GEAR4 = 1375
+    _GEAR1 = 0,
+    _GEAR2,
+    _GEAR3,
+    _GEAR4
 };
 
-const uint16_t CPIn[]={_GEAR1, _GEAR2, _GEAR3, _GEAR4};
+const uint16_t CPIn[]={ 125, 500, 1000, 1375};
 
 typedef union {
   uint32_t raw;
@@ -462,6 +462,7 @@ report_mouse_t pointing_device_driver_get_report(report_mouse_t mouse_report){
      mouse_report.y = data.dy;
      //mouse_report.x = data.dx / nCPI; // fake cpi
      //mouse_report.y = data.dy / nCPI; // fake cpi
+#if 1     
      if(jMode == _MOUSE){
       report_analog_joystick_t jdata = analog_joystick_read();
       //mouse_report.h = 0;
@@ -469,7 +470,7 @@ report_mouse_t pointing_device_driver_get_report(report_mouse_t mouse_report){
       mouse_report.x += -jdata.y;
       mouse_report.y += -jdata.x;
      }
-
+#endif
      return mouse_report; 
 }
 uint16_t pointing_device_driver_get_cpi(void){
@@ -706,6 +707,9 @@ void eeconfig_init_user(void) {  // EEPROM is getting reset!
     eeconfig_update_user(user_config.raw); // Write default value to EEPROM now
     pointing_device_driver_set_cpi(CPIn[nCPI]);
   }
+  //user_config.nCPI = _GEAR3;
+  //eeconfig_update_user(user_config.raw); // Write default value to EEPROM now
+  //pointing_device_driver_set_cpi(1000);
 
 }
 #endif
