@@ -24,8 +24,10 @@
 #define ADNS5050_CS_PIN     GP11
 #define POINTING_DEVICE_INVERT_Y
 
-#define ENCODERS_PAD_A { GP12 }
-#define ENCODERS_PAD_B { GP13 }
+//#define ENCODERS_PAD_A { GP12 }
+//#define ENCODERS_PAD_B { GP13 }
+#define ENCODER_A_PINS { GP12 }
+#define ENCODER_B_PINS { GP13 }
 #define ENCODER_TESTS
 
 //#define I2C_DRIVER I2CD0
