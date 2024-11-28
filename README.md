@@ -1,5 +1,5 @@
 # jmouse
-
+* 20241128修正
 * qmk 0.26.10
 
 * hardware
