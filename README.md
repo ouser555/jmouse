@@ -68,6 +68,6 @@
 
 
 
-* 講完收工，最後附上模型連結，是放在printables上的
+* 最後附上模型連結，是放在printables上的
 
   https://www.printables.com/model/730351-jmouse
